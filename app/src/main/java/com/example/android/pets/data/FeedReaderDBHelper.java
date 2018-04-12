@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static com.example.android.pets.data.PetContract.*;
 
 /**
+ * unussed raw access
  * Created by m on 23.03.18.
  */
 
@@ -18,14 +19,8 @@ public class FeedReaderDBHelper extends SQLiteOpenHelper{
         super(context, name, factory, version);
     }
 
-//    public FeedReaderDBHelper(SQLiteDatabase db){
-////        super();
-//
-//    }
 
     public void onCreate(SQLiteDatabase db){
-//        super(db);
-//SQLiteDatabase dbCreate=new
         String createSql="CREATE TABLE " +
                 PetEntry.TABLE_NAME +
                 "("+PetEntry._ID+" INTEGER, "+PetEntry.COLUMN_PET_NAME+" TEXT, breed TEXT, gender INTEGER, weight INTEGER);";
@@ -33,7 +28,6 @@ db.execSQL(createSql);
     }
 
     public void onUpgrade(SQLiteDatabase db,int oldVersion, int newVersion){
-//        super(db);
 
 
     }
